@@ -95,6 +95,8 @@ You Created. --> Save.
 	kops create cluster --zones us-east-2c --networking weave --master-size t2.medium --master-count 1 --node-size t2.medium --node-count=2 ${NAME}
 	
 	kops create secret --name ${NAME} sshpublickey admin -i ~/.ssh/id_rsa.pub
+	
+	kops create secret --name ${NAME} sshpublickey admin -i /home/kops/.ssh/id_rsa
 
 # 9) Create kubernetes cluser
 
